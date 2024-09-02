@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    --red-clr: #ff3939;
+    --black-clr: #010101;
+    --white-clr: #ffffff;
+}
+
+
+span {
+    background-color: var(--red-clr);
+    color: var(--white-clr);
+    padding: 15px 10px;
+    display: inline-block;
+    margin: 250px;
+    font-weight: 600;
+    position: relative;
+}
+
+span::after {
+    content: "This Is ToolTip Content";
+    position: absolute;
+    background-color: var(--black-clr);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    top: -55px;
+    left: -50px;
+    font-weight: 100;
+    visibility: hidden;
+    transition: visibility 0.7;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--black-clr);
+    border-bottom: 10px solid transparent;
+    left: 50%;
+    top: -17px;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+    transition: visibility 0.7 ease;
+}
+
+span:hover::after {
+    visibility: visible;
+}
+
+span:hover::before {
+    visibility: visible;
+}
