@@ -35,7 +35,7 @@ div::before {
 }
 
 div::after {
-    content: "";
+
     bottom: -2px;
     left: 0;
 }
