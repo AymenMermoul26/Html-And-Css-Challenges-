@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --ball-one-clr: #00ffbb;
+    --ball-two-clr: #ff2238;
+    --radius: 50%
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100px;
+    padding: 10px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: var(--ball-one-clr);
+    border-radius: var(--radius);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background-color: var(--ball-two-clr);
+    border-radius: var(--radius);
+
+}
+
+
+.item1::after {
+    animation: aroundballleft 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+.item2::after {
+    animation: aroundballright 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+.item3::after {
+    animation: aroundballtop 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+.item4::after {
+    animation: aroundballbottom 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+@keyframes aroundballleft {
+    0% {
+        transform: translate(0px);
+
+    }
+
+    25% {
+        transform: translate(-100px);
+
+
+    }
+
+    50% {
+        transform: translate(0px);
+        z-index: -1;
+    }
+
+    75% {
+        transform: translate(100px);
+
+
+    }
+
+    100% {
+        transform: translate(0px);
+
+
+    }
+}
+
+
+@keyframes aroundballright {
+    0% {
+        transform: translate(0px);
+
+
+    }
+
+    25% {
+        transform: translate(100px);
+
+
+    }
+
+    50% {
+        transform: translate(0px);
+        z-index: -1;
+
+    }
+
+    75% {
+        transform: translate(-100px);
+
+    }
+
+    100% {
+        transform: translate(0px);
+
+    }
+}
+
+
+@keyframes aroundballtop {
+    0% {
+        transform: translate(0px, 0px);
+
+    }
+
+    25% {
+        transform: translate(100px, -50px);
+
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+        z-index: -1;
+
+    }
+
+    75% {
+        transform: translate(-100px, 50px);
+
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+@keyframes aroundballbottom {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(-100px, -50px);
+
+    }
+
+    50% {
+        transform: translate(0px);
+        z-index: -1;
+    }
+
+    75% {
+        transform: translate(100px, 50px);
+
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
