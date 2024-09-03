@@ -65,6 +65,31 @@ body {
     animation: aroundballbottom 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
 }
 
+
+
+.span2 {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background-color: var(--ball-two-clr);
+    border-radius: var(--radius);
+    animation: aroundballtop 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+.item5::after {
+    animation: toptobottom 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
+.item5::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background-color: var(--ball-two-clr);
+    border-radius: var(--radius);
+    animation: aroundballbottom 3s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
+}
+
 @keyframes aroundballleft {
     0% {
         transform: translate(0px);
@@ -122,6 +147,36 @@ body {
 
     100% {
         transform: translate(0px);
+
+    }
+}
+
+@keyframes toptobottom {
+    0% {
+        transform: translate(0px, 0px);
+
+
+    }
+
+    25% {
+        transform: translate(0, 100px);
+
+
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+        z-index: -1;
+
+    }
+
+    75% {
+        transform: translate(0px, -100px);
+
+    }
+
+    100% {
+        transform: translate(0px, 0px);
 
     }
 }
