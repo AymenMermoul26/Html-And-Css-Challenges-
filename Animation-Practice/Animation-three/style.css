@@ -46,6 +46,7 @@ header {
     background-color: rgba(232, 232, 232, 0.31);
     border-radius: 10px;
     transition: opacity 0.3s ease;
+    display: grid;
     place-items: center;
 }
 
@@ -55,4 +56,32 @@ header {
 
 .container:hover .item:hover {
     opacity: 1;
+}
+
+.item1>div {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    animation-name: loader-1;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader-1 {
+    0% {
+        opacity: 0;
+        transform: translate(-40px, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(40px, 0);
+    }
 }
