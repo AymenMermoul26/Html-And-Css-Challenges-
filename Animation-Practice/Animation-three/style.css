@@ -52,15 +52,23 @@ header {
 
 .container:hover .item {
     opacity: 0.3;
+    cursor: pointer;
 }
 
 .container:hover .item:hover {
     opacity: 1;
 }
 
-/* loader-1 */
-.item1::before {
+.item::after,
+.item::before {
     content: "";
+    position: absolute;
+}
+
+/* loader-1 */
+.item1::before,
+.item1::after {
+
     width: 15px;
     height: 15px;
     background-color: white;
@@ -69,6 +77,10 @@ header {
     animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+.item1::after {
+    animation-delay: 0.2s;
 }
 
 @keyframes loader-1 {
@@ -91,42 +103,84 @@ header {
 /* loader-2 */
 .item2::after,
 .item2::before {
-    content: "";
     width: 15px;
     height: 15px;
-    position: absolute;
-    margin-left: 10px;
     background-color: white;
-    border-radius: 50%;
-    animation: loader-2 0.8s cubic-bezier(0.2, 0.32, 0, 0.87) infinite;
+    animation-name: loader-2;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
-.item2::before {
-    animation-delay: 0.4s
+.item2::after {
+    transform: translateX(-30px);
+
 }
-
-
 
 
 
 @keyframes loader-2 {
-
-    0%,
-    80%,
-    100% {
+    0% {
+        transform: translate(-50px, -30px);
         opacity: 0;
     }
 
-    33% {
+    50% {
         opacity: 1;
     }
 
-    0%,
     100% {
-        transform: translateX(-4vmin);
+        opacity: 0.5;
+    }
+}
+
+
+/* loader three */
+.item3::after {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    transform: translate(-40px, -40px);
+    animation-name: loader-3;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item3::before {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    transform: translate(-40px, -40px);
+    animation-name: loader-3;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+
+@keyframes loader-3 {
+    0% {
+        opacity: 0;
     }
 
-    90% {
-        transform: translateX(4vmin);
+    25% {
+        opacity: 1;
+        transform: translate(40px, -40px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(40px, 40px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(-40px, 40px);
+    }
+
+    100% {
+        opacity: 0;
     }
 }
