@@ -216,8 +216,6 @@ header {
     animation-iteration-count: infinite;
 }
 
-
-
 @keyframes loader-4 {
 
     0%,
@@ -237,7 +235,45 @@ header {
     88% {
         transform-origin: right;
     }
+}
 
+.item5::before,
+.item5::after {
+    width: 3px;
+    height: 30px;
+    background-color: white;
+    animation-name: loader-5;
+    animation-timing-function: cubic-bezier(0, 0, 0.24, 1.12);
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+}
 
+.item5::after {
+    right: 70px;
+}
+
+.item5::before {
+    left: 70px;
+    animation-delay: 0.3s;
+}
+
+@keyframes loader-5 {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(40px);
+    }
 
 }
