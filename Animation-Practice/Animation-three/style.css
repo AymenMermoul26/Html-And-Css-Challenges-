@@ -275,5 +275,38 @@ header {
     100% {
         transform: translateY(40px);
     }
+}
+
+.item6::after {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    animation-name: loader-6;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader-6 {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    25% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translate(100%, 100%);
+    }
+
+    75% {
+        transform: translateY(100%);
+    }
+
 
 }
