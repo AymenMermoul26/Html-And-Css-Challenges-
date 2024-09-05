@@ -207,15 +207,15 @@ header {
 
     0%,
     44%,
-    88.1%,
+    88%,
     100% {
         transform-origin: left;
+        transform: scaleX(0);
     }
 
-    0%,
-    100%,
-    88% {
-        transform: scaleX(0);
+    33%,
+    44% {
+        transform: scaleX(1);
     }
 
     44.1%,
@@ -223,8 +223,6 @@ header {
         transform-origin: right;
     }
 
-    33%,
-    44% {
-        transform: scaleX(1);
-    }
+
+
 }
