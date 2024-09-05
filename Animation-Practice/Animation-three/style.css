@@ -307,6 +307,24 @@ header {
     75% {
         transform: translateY(100%);
     }
-
-
 }
+
+.item7::after,
+.item7::before {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    animation: loader-7 0.9s linear infinite;
+}
+
+.item7::after {
+    left: 60px;
+    animation-direction: reverse;
+}
+
+.item7::before {
+    right: 60px;
+    animation-direction: reverse;
+}
+
+@keyframes loader-7 {}
