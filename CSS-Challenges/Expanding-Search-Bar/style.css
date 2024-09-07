@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 20px auto;
+    width: 200px;
+}
+
+#search {
+    width: calc((1/3)* 100%);
+    border-radius: 3px;
+    transition: width 0.8s;
+    padding: 5px;
+}
+
+label {
+    visibility: hidden;
+}
+
+#search:focus {
+    width: 100%;
+    outline: none;
+    border: 2px solid rgb(0, 136, 255);
+}
+
+#search:focus::placeholder {
+    color: transparent;
+}
