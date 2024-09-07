@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-clr: #dcdbdb;
+    --Spoiler-clr: #000;
+    --text-clr: #000;
+}
+
+.post {
+    width: 300px;
+    margin: 20px auto;
+    background-color: var(--main-clr);
+    line-height: 1.6;
+    padding: 16px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+span {
+    background-color: var(--Spoiler-clr);
+    color: var(--text-clr);
+    transition: background-color 0.6s;
+
+}
+
+span:hover {
+    background-color: transparent;
+}
