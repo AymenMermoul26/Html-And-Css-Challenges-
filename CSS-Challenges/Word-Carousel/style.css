@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple-clr: #77ff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+div::after {
+    content: "Coding";
+    background-color: var(--purple-clr);
+    padding: 10px;
+    color: white;
+    margin-left: 5px;
+    border-radius: 8px;
+    animation: Word-changes 6s linear infinite;
+}
+
+@keyframes Word-changes {
+
+    25% {
+        content: "Ghibi Movies";
+    }
+
+    50% {
+        content: "Moon";
+    }
+
+    100% {
+        content: "To Be alone";
+    }
+}
