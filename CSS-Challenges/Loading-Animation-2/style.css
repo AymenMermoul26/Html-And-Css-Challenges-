@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-1: #44deee;
+    --clr-2: #c1ee44;
+    --clr-3: #44ee9f;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    animation-name: loading;
+    transform: rotate(45deg);
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(01, 0.8, 1, 1);
+    animation-iteration-count: infinite;
+}
+
+.item1 {
+    background-color: var(--clr-1);
+}
+
+.item2 {
+    background-color: var(--clr-2);
+}
+
+.item3 {
+    background-color: var(--clr-3);
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+
+    }
+}
