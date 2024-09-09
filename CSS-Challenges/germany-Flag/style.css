@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --red-clr: #ff0000;
+    --balck-clr: #000;
+    --yellow-clr: #f3d918;
+}
+
+.flag {
+    height: 250px;
+    width: calc(250px*5/3);
+    display: grid;
+    margin: 100px auto;
+}
+
+.item2 {
+    background-color: var(--red-clr);
+}
+
+.item1 {
+    background-color: var(--balck-clr);
+}
+
+.item3 {
+    background-color: var(--yellow-clr);
+}
