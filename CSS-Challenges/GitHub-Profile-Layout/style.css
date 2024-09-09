@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Work Sans", system-ui;
+    background-color: var(--black-clr);
+}
+
+:root {
+    --black-clr: #0b0a0a;
+    --black-blue-clr: #11111c;
+    --gray1-clr: #adadad;
+    --gray2-clr: #969494;
+    --gray3-clr: #212027;
+    --padding: 15px 20px;
+    --radius: 50%;
+}
+
+.container {
+    max-width: 350px;
+    min-width: 250px;
+    background-color: var(--black-blue-clr);
+    margin: 20px auto;
+    padding: var(--padding);
+    border-radius: 7px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.container .main-container img {
+    width: 100%;
+    height: 290px;
+    border-radius: var(--radius);
+    background-size: cover;
+}
+
+.container .main-container .text h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 13px;
+}
+
+.container .main-container .text p:nth-child(2) {
+    font-size: 14px;
+    color: var(--gray2-clr);
+}
+
+.container .main-container .text p:nth-child(3) {
+    font-size: 18px;
+    color: var(--gray1-clr);
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: var(--gray3-clr);
+    color: var(--gray1-clr);
+    padding: 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    border: 1px solid #eee;
+    color: #eee;
+    background-color: #413f3f;
+}
