@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-clr: #214593;
+    --yellow-clr: #e7c231;
+    --height: 250px;
+}
+
+.flag {
+    height: var(--height);
+    width: calc(var(--height)*8/5);
+    background-color: var(--blue-clr);
+    margin: 200px auto;
+    position: relative;
+    display: flex;
+}
+
+.flag::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(calc(var(--height)) * 1/5);
+    background-color: var(--yellow-clr);
+    left: 30%;
+}
+
+.flag::before {
+    content: "";
+    position: absolute;
+    height: calc(calc(var(--height)) * 1/5);
+    width: 100%;
+    background-color: var(--yellow-clr);
+    align-self: center;
+}
