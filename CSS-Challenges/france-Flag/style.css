@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red-clr: #ff0000;
+    --blue-clr: #0404a7;
+    --white-clr: #ffffff;
+}
+
+.flag {
+    height: 250px;
+    width: calc(250px *3/2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 100px auto;
+}
+
+
+
+.item1 {
+    background-color: var(--blue-clr);
+}
+
+.item2 {
+    background-color: var(--white-clr);
+}
+
+.item3 {
+    background-color: var(--red-clr);
+}
