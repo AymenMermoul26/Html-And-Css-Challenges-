@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --stage-1: 25%;
+    --stage-2: 50%;
+    --stage-3: 75%;
+    --stage-4: 100%;
+    --clr-1: #d1f836;
+    --clr-2: #6af836;
+    --clr-3: #63f8f3;
+    --clr-4: #639af8;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 400px;
+    height: 40px;
+    background-color: #dddddd;
+    border-radius: 40px;
+
+}
+
+.stage-1 {
+    width: var(--stage-1);
+    height: 100%;
+    border-radius: 40px;
+    background-color: var(--clr-1);
+}
+
+.stage-2 {
+    width: var(--stage-2);
+    height: 100%;
+    border-radius: 40px;
+    background-color: var(--clr-2);
+}
+
+.stage-3 {
+    width: var(--stage-3);
+    height: 100%;
+    border-radius: 40px;
+    background-color: var(--clr-3);
+}
+
+.stage-4 {
+    width: var(--stage-4);
+    height: 100%;
+    border-radius: 40px;
+    background-color: var(--clr-4);
+}
