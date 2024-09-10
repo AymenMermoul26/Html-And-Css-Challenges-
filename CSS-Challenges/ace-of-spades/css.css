@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    width: 200px;
+    height: calc(200px *3/2);
+    border: 2px solid black;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.top-corn,
+.bottom-corn {
+    font-size: 20px;
+}
+
+.center-corn {
+    font-size: 60px;
+    align-self: center;
+}
+
+.bottom-corn {
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
