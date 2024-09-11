@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-1: rgba(238, 68, 68, 0.758);
+    --clr-2: #1d5d5d;
+    --clr-3: #22a3da;
+    --clr-gray: #d5d5d5;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    background-color: #ececec;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.bar {
+    width: 70%;
+    height: 40px;
+    background-color: var(--clr-gray);
+    border-radius: 40px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 10%;
+    border-radius: 40px;
+
+    background-color: var(--clr-1);
+    animation: progress-bar 3s cubic-bezier(0.565, 0.54, 0.24, 1) infinite;
+}
+
+@keyframes progress-bar {
+
+
+    40% {
+        width: 60%;
+        background-color: var(--clr-2);
+    }
+
+    70% {
+        width: 100%;
+        background-color: var(--clr-3);
+    }
+
+    100% {
+        width: 100%;
+        background-color: var(--clr-3);
+    }
+}
