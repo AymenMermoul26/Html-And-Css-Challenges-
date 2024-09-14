@@ -1,0 +1,45 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --radius: 12px;
+    --gray-clr-one: #9ca8b6;
+    --gray-clr-two: #232b3c;
+}
+
+body {
+    background-color: var(--gray-clr-one);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: var(--gray-clr-two);
+    width: 900px;
+    height: 650px;
+    padding: 10px;
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    perspective: 300px;
+}
+
+.card {
+    background-color: #3b5878;
+    position: relative;
+
+}
+
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+
+}
