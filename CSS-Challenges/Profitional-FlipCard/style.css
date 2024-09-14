@@ -28,18 +28,42 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-    perspective: 300px;
+    perspective: 900px;
 }
 
 .card {
     background-color: #3b5878;
     position: relative;
+    transition: transform .7s;
+    transform-style: preserve-3d;
 
 }
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
 
 .front,
 .back {
     position: absolute;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
+.front {
+    background-color: red;
+
+}
+
+.back {
+    background-color: rebeccapurple;
+}
+
+.card:hover .back {
+    transform: rotateY(180deg);
 }
