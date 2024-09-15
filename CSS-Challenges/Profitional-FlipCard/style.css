@@ -20,7 +20,7 @@ body {
 
 .main-container {
     background-color: var(--gray-clr-two);
-    width: 900px;
+    width: 700px;
     height: 650px;
     padding: 10px;
     border-radius: var(--radius);
